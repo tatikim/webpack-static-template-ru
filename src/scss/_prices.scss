@@ -1,0 +1,51 @@
+.prices__header {
+  display: none;
+}
+.prices-item {
+  height: 200px;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  flex-shrink: 0;
+  border: none;
+  outline: none;
+  margin-right: 16px;
+}
+.prices__service::before,
+.prices__price::before,
+.prices__time::before {
+  display: block;
+  color: #999;
+  margin-top: 10px;
+}
+.prices__service::before {
+  content: 'Ремонтные услуги';
+}
+
+.prices__price::before {
+  content: 'Цена';
+}
+
+.prices__time::before {
+  content: 'Срок';
+}
+
+.prices__button {
+  display: flex;
+  background: none;
+  border: none;
+  outline: none;
+  justify-content: flex-end;
+}
+
+.prices__button {
+  position: absolute;
+  right: 0;
+  top: 75%;
+  transform: translateY(-40%);
+  padding: 10px;
+}
+.offer {
+  display: none;
+}
+

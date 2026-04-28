@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  background: $background-con;
+  border-top: $border;
+}
+.footer-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+}
+.text {
+  padding: 10px 0 10px 20px;
+}

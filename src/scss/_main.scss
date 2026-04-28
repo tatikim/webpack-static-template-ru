@@ -1,0 +1,40 @@
+.phone {
+  background: $background-con;
+  border-top: $border;
+}
+.items {
+  pading: 10px;
+}
+.items::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  z-index: 1000;
+  pointer-events: none;
+  background: linear-gradient(
+    to left,
+    rgba(245, 243, 243, 1),
+    rgba(245, 243, 243, 0)
+  );
+}
+.item {
+  display: flex;
+  background-color: $bg-main;
+  border: rgb(231, 231, 231) 1px solid;
+  border-radius: 5px;
+  width: 250px;
+  padding: 10px;
+}
+.phone__list {
+  display: flex;
+  height: auto !important;
+  margin: 10px 0 30px 10px;
+gap: 10px;
+}
+.arrow {
+  justify-content: space-between;
+  width: 250px;
+}

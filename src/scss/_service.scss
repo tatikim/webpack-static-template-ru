@@ -1,0 +1,66 @@
+.service {
+  background: $background-con;
+  border-top: $border;
+}
+.services__title {
+  font-size: 25px;
+  position: relative;
+  line-height: 32px;
+  color: $color-text;
+  padding: 30px 0 0 20px;
+}
+.services__menu {
+  padding: 20px 0;
+}
+.services__title::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  width: 4px;
+  height: 35px;
+  border-radius: 2px;
+  background-color: $background-line;
+}
+.menu__list {
+  display: flex;
+  overflow-x: auto;
+  list-style: none;
+  padding: 10px;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-x;
+}
+
+.menu__item {
+  flex: none;
+  margin: 0;
+}
+
+.menu__link {
+  display: block;
+  padding: 8px 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #7e7e82;
+}
+
+.menu__item--active .menu__link {
+  background: $bg-main;
+  border: $border;
+}
+
+.services__image img {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+}
+.controls-article {
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+  padding: 10px 0;
+}
+.text-article {
+  padding: 10px;
+}

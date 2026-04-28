@@ -1,17 +1,217 @@
-$bgColor: #24292e;
-$text: #fff;
+@import 'variables';
+@import 'buttons';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+@import 'header';
+@import 'aside';
+@import 'service';
+@import 'main';
+@import 'brands';
+@import 'technology';
+@import 'prices';
+@import 'footer';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+  font-family: 'TT Lakes', sans-serif;
+  color: $text-main;
+  width: 100%;
+  margin: 0 auto;
+  font-size: $font-size-base;
+}
+.container {
+  margin: 0 auto;
+}
+.prices-tablap {
+  display: none;
+}
+.text-open {
+  display: none;
+}
+
+.text-open.show-all {
+  display: flex;
+}
+.hidden {
+  display: none;
+}
+.controls {
+  display: none;
+}
+@media (min-width: 768px) {
+    
+  .header__iconmiddle {
+    display: flex;
+    margin-left: 150px;
+    padding: 20px;
+  }
+
+  article {
+    display: flex;
+  }
+  .text-button {
+    flex: 1;
+  }
+  .services__image {
+    flex: 1;
+    height: auto;
+  }
+
+  .phone {
+    display: grid;
+  }
+  .phone__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    padding: 10px 0;
+  }
+  .show {
+    display: none;
+  }
+  .item {
+    width: 230px;
+  }
+  .items::after {
+    content: '';
+    background: none;
+  }
+
+  .text {
+    width: 500px;
+  }
+  .mobile-offer {
+    display: none;
+  }
+  .offer {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  .prices__list {
+    display: none;
+  }
+  .prices-tablap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6fr;
+  }
+  .prices__header {
+    background: $background-con;
+  }
+  .prices__header,
+  .prices__ro {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    grid-template-rows: 6fr;
+    padding: 20px 10px;
+    margin: 0 20px;
+    border-bottom: 1px solid;
+  }
+  .prices__ro {
+    background-color: $bg-main;
+  }
+  .footer {
+    flex-direction: row;
+  }
+  .footer-text {
+    flex: 1;
+  }
+  .text__left {
+    text-align: left;
+  }
+
+  .text__right {
+    text-align: right;
+  }
+}
+
+@media (min-width: 1440px) {
+.container {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+  }
+
+ .aside__menu {
+    position: relative; // не fixed
+    height: auto;
+    transform: translateX(0);
+  }
+ 
+  .page {
+    overflow: auto;
+  }
+  .header__iconleft,
+  .header__logo,
+  .header__iconmiddle {
+    display: none;
+  }
+  .services__icon__text {
+    display: flex;
+  }
+  .header__iconright {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    transform: translateY(40%);
+    color: $color-text;
+  }
+  .header-title::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    width: 4px;
+    height: 35px;
+    border-radius: 2px;
+    background-color: $background-line;
+  }
+  .header-title {
+    display: flex;
+
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    color: $color-text;
+    padding: 40px 0 0 20px;
+  }
+  .services__title {
+    display: none;
+  }
+  .header__iconright {
+    ::before {
+      display: none;
+    }
+  }
+  .service {
+    border: none;
+    margin: 0;
+  }
+  .hide-laptop {
+    display: flex;
+  }
+
+  .phone__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .item {
+    width: 250px;
+  }
+  .hide-repair {
+    display: flex;
+  }
 }

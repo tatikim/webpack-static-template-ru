@@ -1,0 +1,13 @@
+.repair-item {
+  height: 200px;
+}
+
+.repair-arrow {
+  flex-direction: column;
+  align-items: flex-start;
+  height: 180px;
+ 
+}
+.repair-arrow img {
+  align-self: flex-end; /* кнопка вправо */
+}
