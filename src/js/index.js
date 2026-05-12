@@ -1,4 +1,10 @@
+import 'swiper/css'
+import 'swiper/css/pagination'
+
 import '../scss/style.scss'
+
+import Swiper from 'swiper'
+import { Pagination } from 'swiper/modules'
 
 console.log('It works!')
 
@@ -25,6 +31,8 @@ function initSwipers() {
     if (swipers.length === 0) {
       document.querySelectorAll('.swiper').forEach((el) => {
         const instance = new Swiper(el, {
+          modules: [Pagination],
+
           slidesPerView: 'auto',
           spaceBetween: 16,
           slidesOffsetAfter: 30,
@@ -36,6 +44,7 @@ function initSwipers() {
             clickable: true
           }
         })
+
         swipers.push(instance)
       })
     }
@@ -46,6 +55,7 @@ function initSwipers() {
 }
 
 initSwipers()
+
 window.addEventListener('resize', initSwipers)
 
 // показать все
@@ -54,6 +64,8 @@ function init() {
     const showBtn = block.querySelector('.showBtn')
     const hideBtn = block.querySelector('.hideBtn')
     const items = block.querySelectorAll('.text-open')
+
+    if (!showBtn || !hideBtn || !items.length) return
 
     showBtn.addEventListener('click', () => {
       items.forEach((el) => el.classList.add('show-all'))

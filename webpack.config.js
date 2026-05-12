@@ -42,7 +42,10 @@ module.exports = {
           'sass-loader' // compiles Sass to CSS, using Node Sass by default
         ]
       },
-
+{
+  test: /\.css$/i,
+  use: ['style-loader', 'css-loader']
+},
       // Include fonts from css
       {
         test: /\.(eot|ttf|woff|woff2)$/,

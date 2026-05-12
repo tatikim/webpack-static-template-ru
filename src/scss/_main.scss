@@ -43,18 +43,17 @@
 .swiper-slide {
   box-sizing: border-box;
   flex-shrink: 0;
+  
 }
 
 .item {
   display: flex;
   align-items: center;
-  width: 250px;
+  width: 250px !important;
   padding: 10px;
-
   background-color: $bg-main;
   border: 1px solid rgb(231, 231, 231);
   border-radius: 5px;
-
   box-sizing: border-box;
 }
 
