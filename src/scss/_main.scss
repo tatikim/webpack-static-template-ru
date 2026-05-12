@@ -1,10 +1,14 @@
 .phone {
   background: $background-con;
   border-top: $border;
+  overflow: hidden;
 }
+
 .items {
-  pading: 10px;
+  position: relative;
+  padding: 10px;
 }
+
 .items::after {
   content: '';
   position: absolute;
@@ -12,29 +16,55 @@
   right: 0;
   width: 30px;
   height: 100%;
-  z-index: 1000;
+  z-index: 10;
   pointer-events: none;
+
   background: linear-gradient(
     to left,
     rgba(245, 243, 243, 1),
     rgba(245, 243, 243, 0)
   );
 }
+
+.swiper {
+  overflow: hidden;
+}
+
+.phone__list {
+  margin: 10px 0 30px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.prices .swiper {
+  padding-right: 220px;
+}
+
+
 .item {
   display: flex;
-  background-color: $bg-main;
-  border: rgb(231, 231, 231) 1px solid;
-  border-radius: 5px;
+  align-items: center;
   width: 250px;
   padding: 10px;
+
+  background-color: $bg-main;
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: 5px;
+
+  box-sizing: border-box;
 }
-.phone__list {
-  display: flex;
-  height: auto !important;
-  margin: 10px 0 30px 10px;
-gap: 10px;
-}
+
 .arrow {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 250px;
+  width: 100%;
 }

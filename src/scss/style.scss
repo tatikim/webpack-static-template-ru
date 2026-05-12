@@ -43,24 +43,21 @@ body {
   display: none;
 }
 @media (min-width: 768px) {
-    
+  .swiper-pagination {
+  display: none !important;
+}
+  .page__header {
+    background: $bg-main;
+    grid-template-columns: 1fr 4fr 1fr 1fr;
+  }
   .header__iconmiddle {
     display: flex;
     margin-left: 150px;
     padding: 20px;
   }
-
-  article {
-    display: flex;
+  .header-divider--left {
+    display: block;
   }
-  .text-button {
-    flex: 1;
-  }
-  .services__image {
-    flex: 1;
-    height: auto;
-  }
-
   .phone {
     display: grid;
   }
@@ -137,19 +134,28 @@ body {
 }
 
 @media (min-width: 1440px) {
-.container {
-    display: grid;
-    grid-template-columns: 320px 1fr;
+  .container {
+ margin-left: 320px;
   }
 
- .aside__menu {
-    position: relative; // не fixed
-    height: auto;
+  .aside__menu {
+   position: fixed;
+  width: 320px;
+  height: 100vh;
     transform: translateX(0);
   }
- 
+.header__left {
+    display: none;
+  }
   .page {
     overflow: auto;
+  }
+  .page__header {
+    background: white;
+    grid-template-columns: 1fr 1fr;
+  }
+  .header-divider {
+    display: none;
   }
   .header__iconleft,
   .header__logo,

@@ -25,15 +25,18 @@ function initSwipers() {
   if (window.innerWidth <= 767) {
     if (swipers.length === 0) {
       document.querySelectorAll('.swiper').forEach((el) => {
-        const instance = new Swiper(el, {
-          slidesPerView: 'auto',
-          spaceBetween: 16,
-          touchEventsTarget: 'wrapper',
-          pagination: {
-            el: el.querySelector('.swiper-pagination'),
-            clickable: true
-          }
-        })
+  const instance = new Swiper(el, {
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  slidesOffsetAfter: 30,
+
+  touchEventsTarget: 'wrapper',
+
+  pagination: {
+    el: el.querySelector('.swiper-pagination'),
+    clickable: true
+  }
+})
         swipers.push(instance)
       })
     }

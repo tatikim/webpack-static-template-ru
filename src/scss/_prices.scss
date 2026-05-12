@@ -2,6 +2,7 @@
   display: none;
 }
 .prices-item {
+    display: flex;
   height: 200px;
   justify-content: flex-start;
   flex-direction: column;
@@ -10,6 +11,15 @@
   border: none;
   outline: none;
   margin-right: 16px;
+}
+.prices-item p {
+  margin: 0;
+  text-align: left;
+}
+.prices__service,
+.prices__price,
+.prices__time {
+  align-self: flex-start;
 }
 .prices__service::before,
 .prices__price::before,
