@@ -3,6 +3,7 @@
 To get started, clone the repository `https://github.com/Habsida-Projects/webpack-static-template`(`git clone https://github.com/Habsida-Projects/webpack-static-template.git`).
 
 The repository already has:
+
 - webpack
 - autoprefixer
 - scss-loader
@@ -28,9 +29,11 @@ The same process applies to JS files. Webpack takes the entry point file, goes t
 The entry point for SCSS is `src/scss/style.css`.
 
 To add a file to the build, write in `src/scss/style.css`:
+
 ```css
 @import './path/to/filename.scss';
 ```
+
 P.S: If you write another `@import` inside a file that has already been imported into `src/scss/style.css`, webpack will include it as well.
 
 ### How to Split CSS into Files?
@@ -40,14 +43,17 @@ Split based on BEM blocks: one file per block.
 The entry point for JS is `src/js/index.js`.
 
 To add a file to the build, write in `src/js/index.js`:
+
 ```js
-import fileName from './path/to/filename';
+import fileName from './path/to/filename'
 ```
 
 In another file (the one you import), you need to export functions/variables, etc.
+
 ```js
-export const myVariable = 'Block 7';
+export const myVariable = 'Block 7'
 ```
+
 [Imports and Exports](https://javascript.info/import-export)
 
 P.S: If you write another `import` inside a file already imported in `src/js/index.js`, webpack will include it as well.

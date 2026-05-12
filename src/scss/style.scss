@@ -44,8 +44,8 @@ body {
 }
 @media (min-width: 768px) {
   .swiper-pagination {
-  display: none !important;
-}
+    display: none !important;
+  }
   .page__header {
     background: $bg-main;
     grid-template-columns: 1fr 4fr 1fr 1fr;
@@ -135,16 +135,16 @@ body {
 
 @media (min-width: 1440px) {
   .container {
- margin-left: 320px;
+    margin-left: 320px;
   }
 
   .aside__menu {
-   position: fixed;
-  width: 320px;
-  height: 100vh;
+    position: fixed;
+    width: 320px;
+    height: 100vh;
     transform: translateX(0);
   }
-.header__left {
+  .header__left {
     display: none;
   }
   .page {
